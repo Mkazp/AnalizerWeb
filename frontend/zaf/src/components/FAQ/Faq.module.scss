@@ -1,0 +1,62 @@
+body {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  p {
+    line-height: 1.5; // Регулируйте значение, чтобы установить желаемый интерлиньяж
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .navColumn {
+    background-color: rgba(0, 0, 0, 0.05);
+    position: fixed;
+    height: 90vh; /* Измененная строка для фиксированной высоты */
+    width: 20%;
+    padding-top: 20px;
+    border-radius: 20px;
+  }
+  
+  .contentColumn {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    margin-left: 21%;
+    margin-top: 10px;
+    overflow-x: hidden;
+  }
+  
+  .navItem {
+    margin-bottom: 5px;
+  }
+  
+  .navLink {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 1.2em;
+    text-decoration: none !important;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .activeNavLink {
+    color: blue;
+  }
+  

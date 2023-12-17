@@ -1,0 +1,33 @@
+// Home.module.scss
+/*.homeContainer {
+    padding: 20px;
+  }
+  
+  .mainImage {
+    max-width: 80%;
+    margin-left: 10%;
+    height: 80%;
+    margin-bottom: 20px;
+  }
+  
+  .svgContainer {
+    display: flex;
+  }
+  
+  .svgIcon {
+    width: 50px; 
+    height: 50px; 
+    margin-right: 10px; 
+  }
+  */
+
+
+.regionImage {
+  position: absolute;
+  border: 1px solid transparent; /* Добавляем начальную прозрачную границу */
+  transition: border-color 0.3s ease-in-out; /* Добавляем анимацию смены цвета границы */
+
+  &:hover {
+    border-color: #03ffee; /* Цвет границы при наведении */
+  }
+}
