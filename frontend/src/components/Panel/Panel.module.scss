@@ -1,0 +1,123 @@
+/* Panel.module.scss */
+.panel {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .panelTitle{
+        margin-left: 5%;
+    }
+
+    .panelTariff{
+     border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 16px;
+    //padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    .Ttitle{
+        display: flex;
+        align-items: center;
+        padding: 3px;
+        padding-left: 15px;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 50px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #ccc;
+        font-size: 20px;
+    }
+
+    .Tariff{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        border-radius: 4px;
+        margin-left: 10px;
+        margin-top: 10px;
+        background-color: rgb(64, 135, 241);
+        width: 70px;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .time{
+        margin-left: 15px;
+    }
+
+    .data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+        position: relative;
+        padding: 16px;
+
+        .line1{
+            background-color: rgba(0, 0, 0, 0.1);
+            width: 2px;
+            height: 80%;
+            position: absolute;
+            margin-top: 10px;
+            left: 33%;
+            //transform: translateX(-50%);
+        }
+        .line2{
+            background-color: rgba(0, 0, 0, 0.1);
+            width: 2px;
+            height: 80%;
+            position: absolute;
+            margin-top: 10px;
+            left: 66%;
+            //transform: translateX(-50%);
+        }
+        .dataItem {
+          flex: 1;
+          text-align: center;
+    
+          p {
+            margin-bottom: 4px;
+          }
+        }
+      }
+    }
+
+    .Apps{
+        margin-top: 5%;
+
+        .AppTitle{
+            margin-left: 5%;
+        }
+
+        .AppDesk{
+            margin-left: 5%;
+            font-weight: normal;
+        }
+    }
+
+    .blueButton {
+        margin-left: 5%;
+        margin-bottom: 5%;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff; /* Синий цвет фона */
+        color: #007bff; /* Белый цвет текста */
+        border: 2px solid #007bff; /* Синий цвет бордера */
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      
+        &:hover {
+          background-color: #007bff; /* Измененный цвет фона при наведении */
+          border-color: #0056b3; /* Измененный цвет бордера при наведении */
+          color: #fff; 
+        }
+      }
+  }
+  

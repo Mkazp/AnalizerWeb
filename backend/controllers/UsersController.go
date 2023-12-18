@@ -1,12 +1,14 @@
 package controllers
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 	"time"
 
 	"github.com/Live-Proggress-Studio/WTD/initializers"
 	"github.com/Live-Proggress-Studio/WTD/models"
+	"gorm.io/gorm"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"
@@ -81,6 +83,7 @@ func Signup(c *gin.Context) {
 func Login(c *gin.Context) {
 	// Get the email and pass off req body
 	var body struct {
+		gorm.Model
 		Email    string
 		Password string
 	}
@@ -135,6 +138,7 @@ func Login(c *gin.Context) {
 	c.SetSameSite(http.SameSiteNoneMode)
 	c.SetCookie("Authorization", tokenString, 30*24*60*60, "", os.Getenv("CLIENT_URL"), false, true)
 
+	fmt.Println(user)
 	// Respond with JSON indicating successful login
 	c.JSON(http.StatusOK, gin.H{
 		"message": user,

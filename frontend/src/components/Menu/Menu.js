@@ -75,7 +75,7 @@ const Menu = () => {
             <img src={logo} height="50" width="50" className="d-inline-block align-top" alt="Logo" style={styles.brandImg} />
             <h2 className="m-0 ml-2" style={styles.brandText}>
               <NavLink to="/" style={styles.brandLink}>
-                Русский нарко картель
+                Название
               </NavLink>
             </h2>
           </Navbar.Brand>
@@ -86,10 +86,21 @@ const Menu = () => {
             <NavLink to="/faq" className="nav-link" activeClassName="active" style={styles.navLink}>
               Документация
             </NavLink>
-            <NavLink to="/virtualdev" className="nav-link" activeClassName="active" style={styles.navLink}>
-              VirtualDev
-            </NavLink>
+            
 
+            {!isAuth && (
+              <NavLink to="/panelInactiv" className="nav-link" activeClassName="active" style={styles.navLink}>
+              Панель Управления
+            </NavLink>
+            )}
+            {isAuth && (
+              <>
+
+            <NavLink to="/panel" className="nav-link" activeClassName="active" style={styles.navLink}>
+              Панель Управления
+            </NavLink>
+              </>
+            )}
 
 
             {!isAuth && (
@@ -98,14 +109,17 @@ const Menu = () => {
               </NavLink>
             )}
             {isAuth && (
+              <>
               <NavLink to="/user/id" className="nav-link" activeClassName="active" style={styles.navLink}>
                 {email}
               </NavLink>
+
+              <NavLink to="/" className="nav-link" activeClassName="active" style={styles.navLink} onClick={Logout}>
+              Выйти
+              </NavLink>
+              </>
             )}
 
-            <NavLink to="/" className="nav-link" activeClassName="active" style={styles.navLink} onClick={Logout}>
-              Выйти
-            </NavLink>
 
           </Nav>
         </Container>

@@ -72,8 +72,9 @@ const Authorization = () => {
           password: registrationData.password,
         }),
       });
-
+      
       if (response.ok) {
+        window.location.reload();
         // Registration successful, handle the response accordingly
         console.log('Registration successful');
       } else {

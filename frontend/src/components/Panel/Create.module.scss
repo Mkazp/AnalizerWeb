@@ -1,0 +1,67 @@
+.panel {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .panelTitle{
+        margin-left: 10%;
+    }
+
+    .panelTas{
+        margin-top: 50px;
+        margin-left: 10%;
+        font-weight: normal;
+    }
+
+    .fullWidthInputContainer {
+        width: 100%;
+        max-width: 600px; /* Вы можете настроить максимальную ширину, если необходимо */
+        margin-left: 10%;
+      }
+      
+      .fullWidthInput {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      .blueButton {
+        margin-top: 30px;
+        margin-left: 10%;
+        margin-bottom: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff; /* Синий цвет фона */
+        color: #007bff; /* Белый цвет текста */
+        border: 2px solid #007bff; /* Синий цвет бордера */
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      
+        &:hover {
+          background-color: #007bff; /* Измененный цвет фона при наведении */
+          border-color: #0056b3; /* Измененный цвет бордера при наведении */
+          color: #fff; 
+        }
+      }
+      
+      /* Стили для ссылки на возврат */
+      .backLink {
+        display: block;
+        margin-left: 10%;
+        margin-bottom: 5%;
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+      
+        &:hover {
+          text-decoration: underline;
+        }
+    }
+}
