@@ -14,6 +14,7 @@ const Authorization = () => {
     confirmPassword: '',
   });
 
+  const [id, setID] = useState(localStorage.getItem('id'));
 
   const toggleForm = () => {
     setIsActive(!isActive);
@@ -24,7 +25,7 @@ const Authorization = () => {
     setIsAuth(true)
     localStorage.setItem('isAuth', true);
     localStorage.setItem('email', loginData.email);
-    window.location.reload();
+    // window.location.reload();
   }
 
   const handleLogin = async () => {
@@ -38,11 +39,17 @@ const Authorization = () => {
       });
 
       // console.log(loginData);
-
+      // setID(localStorage.setItem("id", response.message));
+      console.log(JSON.stringify(response.message));
 
       if (response.ok) {
-        // Authentication successful, handle the response accordingly
         SuccsessAuth()
+        const responseData = await response.json();
+        const userId = responseData.message.ID;
+
+        setID(userId);
+        localStorage.setItem('id', userId);
+        // console.log(response);
       } else {
         // Authentication failed, handle the error
         console.error('Authentication failed');
@@ -72,7 +79,7 @@ const Authorization = () => {
           password: registrationData.password,
         }),
       });
-      
+
       if (response.ok) {
         window.location.reload();
         // Registration successful, handle the response accordingly
