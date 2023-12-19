@@ -1,21 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Arg.module.scss';
-import { useParams } from 'react-router-dom';
+import { useQuery } from '../../Hooks/useQuery';
 
 const Arg = () => {
   const [app, setApp] = useState(null);
-  const { appId } = useParams();
+  const query = useQuery();
 
   useEffect(() => {
-    // Check if appId is truthy before making the request
-    if (appId) {
-      handleGetApp();
-    }
-  }, [appId]);
+    handleGetApp();
+  }, []);
 
   const handleGetApp = async () => {
     try {
-      const response = await fetch(`http://213.171.8.164:5001/ZakupkiWebApi/app/${appId}`, {
+      const response = await fetch(`http://213.171.8.164:5001/ZakupkiWebApi/app/${query.get("App_id")}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
