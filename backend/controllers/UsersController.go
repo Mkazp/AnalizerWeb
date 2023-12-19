@@ -188,7 +188,7 @@ func GetUserByID(c *gin.Context) {
 
 // @ Logout controller
 func Logout(c *gin.Context) {
-	c.SetCookie("Authorization", "", -1, "", os.Getenv("CLIENT_URL"), false, true)
+	c.SetCookie("Authorization", "", -1, "", os.Getenv("CLIENT_URL"), false, false)
 
 	c.JSON(http.StatusOK, gin.H{
 		"message": "Успешный выход из аккаунта!",
