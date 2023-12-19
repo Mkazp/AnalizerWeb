@@ -25,7 +25,7 @@ const Authorization = () => {
     setIsAuth(true)
     localStorage.setItem('isAuth', true);
     localStorage.setItem('email', loginData.email);
-    // window.location.reload();
+    window.location.reload();
   }
 
   const handleLogin = async () => {
