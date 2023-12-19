@@ -1,7 +1,41 @@
 .panel {
+    .art{
+        padding-bottom: 40px;
+
     border: 1px solid #ccc;
     border-radius: 4px;
     margin: 16px;
-    padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .inter{
+        padding: 20px;
+    }
+
+    .tap{
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin: 16px;
+        padding: 16px;
+        background-color: #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .Req{
+        padding: 20px;
+    }
+
+    .blueButton{
+        text-decoration: none;
+        color: #373737;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        padding: 16px;
+        border-radius: 5px;
+        border: 1px solid #ff0000;
+
+        &:hover{
+            background-color: #e77373;
+        }
+    }
+    }
 }

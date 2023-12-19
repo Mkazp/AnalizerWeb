@@ -66,16 +66,14 @@ const Panel = () => {
         </div>
       </div>
       
-    <div className={styles.Apps}>
+      <div className={styles.Apps}>
         <h1 className={styles.AppTitle}>Приложения</h1>
         {apps.length > 0 ? (
           <ul className={styles.appList}>
             {apps.map((app, index) => (
               <li key={index} className={styles.appItem}>
-                <Link className={styles.link}>
-                  <p>{app.Name}</p>
-                  <p>Количество запросов: {app.Queries}</p>
-                </Link>
+                  <p className={styles.linkTl}>{app.Name}</p>
+                  <p className={styles.allert}>Количество запросов: {app.Queries}</p>
                 <Link to={`/arg?App_id=${app.App_id}`} className={styles.link}>
                   Редактировать
                 </Link>
@@ -88,8 +86,8 @@ const Panel = () => {
           </h3>
         )}
       </div>
-      <Link to="/create" className={styles.blueButton}>
-        Добавить приложение
+      <Link to="/Panel" className={styles.backLink}>
+        Назад
       </Link>
     </div>
   );

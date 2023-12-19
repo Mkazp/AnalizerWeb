@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Arg.module.scss';
 import { useQuery } from '../../Hooks/useQuery';
+import { Link } from 'react-router-dom';
 
 const Arg = () => {
   const [app, setApp] = useState(null);
@@ -34,12 +35,15 @@ const Arg = () => {
   return (
     <div className={styles.panel}>
       {app ? (
-        <div>
-          <h2>Детали для ID приложения: {app.name}</h2>
-          <p>Имя приложения: {app.clientId}</p>
-          <p>Имя приложения: {app.clientSecret}</p>
-          <p>Имя приложения: {app.queries}</p>
-          {/* Добавьте другие свойства приложения, которые вы хотите отобразить */}
+        <div className={styles.art}>
+          <h2 className={styles.inter}>Детали для ID приложения: {app.name}</h2>
+          <p className={styles.tap}>ClientId: {app.clientId}</p>
+          <p className={styles.tap}>ClientSecret: {app.clientSecret}</p>
+          <p className={styles.Req}>Количество запросов: {app.queries}</p>
+
+          <Link to="/panek" className={styles.blueButton}>
+            Назад
+          </Link>
         </div>
       ) : (
         <p>Loading...</p>
