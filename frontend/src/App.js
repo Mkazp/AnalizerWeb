@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/Panel" element={<Panel />} />
             <Route path="/PanelInactiv" element={<PanelInactiv />} />
             <Route path="/Authorization" element={<Authorization />} />
-            <Route path="/Arg" element={<Arg />} />
+            <Route path="/arg" element={<Arg />} />
             <Route path="/Create" element={<Create />} />
           </Routes>
         </div>
